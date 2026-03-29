@@ -1,0 +1,7 @@
+model Booking {
+ id        String   @id @default(uuid())
+ userId    String
+ date      DateTime
+ status    String   @default("pending")
+ createdAt DateTime @default(now())
+}
