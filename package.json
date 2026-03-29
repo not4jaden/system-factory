@@ -1,13 +1,15 @@
 {
   "name": "system-factory",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "CLI-powered code generation platform for production Next.js systems",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "create-system": "node generator/create-system.js"
+    "create-system": "node generator/create-system.js",
+    "list-modules": "node -e \"const fs=require('fs');fs.readdirSync('./modules').forEach(m=>console.log('  -',m))\"",
+    "list-systems": "node -e \"const fs=require('fs');const d='./generated-systems';if(fs.existsSync(d))fs.readdirSync(d).forEach(s=>console.log('  -',s));else console.log('  No systems generated yet.')\"",
+    "test": "echo \"No tests yet\" && exit 0"
   },
-  "keywords": [],
+  "keywords": ["system-factory", "code-generation", "nextjs", "saas"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
